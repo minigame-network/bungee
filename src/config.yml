@@ -1,0 +1,9 @@
+#Define all the gamemodes that will be loaded into the queue system
+gamemodes:
+  - water-wars
+
+#Define all the servers within each gamemode
+servers:
+  water-wars:
+    - ww-solo-1
+    - ww-solo-2

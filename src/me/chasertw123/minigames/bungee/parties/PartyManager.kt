@@ -43,10 +43,7 @@ class PartyManager {
     }
 
     fun removeFromParty(user: User) {
-        val party = getParty(user)
-
-        if(party == null)
-            return
+        val party = getParty(user) ?: return
 
         if(isPartyLeader(user)) {
             // Disband the party.
@@ -54,7 +51,7 @@ class PartyManager {
             parties.remove(party)
         } else {
             party.members.remove(user.uuid)
-            user.sendMessage(ChatColor.RED + "You have left your former party-mates to party alone.")
+            user.sendMessage("You have left your former party-mates to party alone.")
         }
     }
 

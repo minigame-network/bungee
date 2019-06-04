@@ -11,7 +11,7 @@ data class Party(var owner: UUID, var members: MutableList<UUID>) {
             val usr = User.get(it)
 
             if(usr != null)
-                usr.player.sendMessage(ChatColor.RED + "Sorry kids, cops are here. Party's over.")
+                usr.player.sendMessage("Sorry kids, cops are here. Party's over.")
         }
     }
 
